@@ -51,3 +51,6 @@ processes = [
 for p in processes: p.start()
 for p in processes: p.join()
 ```
+
+## @synchronized vs. @thread_synchronized
+There are two decorators available, one for processes and the other one for threads. Use `@synchronized` for `multiprocessing` and `@synchronized_thread` for `threading` as the thread version will be slightly more performant when using threads.
